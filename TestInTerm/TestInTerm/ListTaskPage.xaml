@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestInTerm.ListTaskPage"
+             Title="List Task">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="add.png" Clicked="Add_Task"/>
+        <ToolbarItem Icon="upload.png" Clicked="Upload_To_Server"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+       <SearchBar Placeholder="Search task"></SearchBar>
+        <ListView x:Name="EmployeeView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <ViewCell.ContextActions >
+                            <MenuItem Icon="edit.png"
+                                      Clicked="Edit_Task"/>
+                            <MenuItem Icon="delete.png"
+                                      Clicked="Delete_Task"/>
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

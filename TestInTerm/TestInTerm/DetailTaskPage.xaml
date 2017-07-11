@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestInTerm.DetailTaskPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="0,10"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="edit.png" Clicked="Edit_Task"/>
+        <ToolbarItem Icon="delete.png" Clicked="Delete_Task"/>
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <Image Source="bg.jpg"
+               Aspect="AspectFill"/>
+        <ScrollView>
+    <StackLayout Margin="20,20">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Task Name: "></Label>
+            <Label x:Name="taskname"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Time Start: "></Label>
+            <Label x:Name="timestart"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Deadline: "></Label>
+            <Label x:Name="deadline"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Des-Short: "></Label>
+            <Label x:Name="desshort"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Description: "></Label>
+            <Label x:Name="description"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Start Time: "></Label>
+            <Label x:Name="startTime"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Priority: "></Label>
+            <Label x:Name="piority"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Status: "></Label>
+            <Label x:Name="status"></Label>
+            <Switch x:Name="statuschange" HorizontalOptions="EndAndExpand" ></Switch>
+        </StackLayout>
+
+
+
+
+
+    </StackLayout>
+    </ScrollView>
+        </Grid>
+</ContentPage>
